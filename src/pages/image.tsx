@@ -3,7 +3,7 @@ import Head from "next/head";
 
 const Image = () => {
   const httpImageUrl =
-    "https://github.blog/wp-content/uploads/2023/05/1200.630-Community-wLogo.png?resize=1200%2C630";
+    "https://github.blog/wp-content/uploads/2023/05/1200.630-Community-wLogo.png";
 
   const localImageUrl = "images/my-picture.jpg";
 
