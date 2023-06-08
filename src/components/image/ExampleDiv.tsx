@@ -1,8 +1,9 @@
+import { StaticImageData } from "next/image";
 import { FC } from "react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 interface ExampleDivProps {
-  imageUrl: string;
+  imageUrl: string | StaticImageData;
 }
 
 const ExampleDiv: FC<ExampleDivProps> = (props: ExampleDivProps) => {

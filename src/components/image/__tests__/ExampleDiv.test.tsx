@@ -1,5 +1,7 @@
 import ExampleDiv from "@/components/image/ExampleDiv";
 import { render, screen } from "@testing-library/react";
+import image from "public/images/my-picture.jpg";
+
 describe("test ExampleDiv", () => {
   test("When passing an image URL starting with https, it should be displayed.", () => {
     const imageUrl =
@@ -9,8 +11,15 @@ describe("test ExampleDiv", () => {
     expect(screen.getByRole("img")).toBeInTheDocument();
   });
 
-  test("When passing a local image path, it should be displayed.", () => {
+  test("When passing a local image address, it should be displayed.", () => {
     const imagePath = "images/my-picture.jpg";
+
+    render(<ExampleDiv imageUrl={imagePath} />);
+    expect(screen.getByRole("img")).toBeInTheDocument();
+  });
+
+  test("When passing a local image mocked path, it should be displayed.", () => {
+    const imagePath = image;
 
     render(<ExampleDiv imageUrl={imagePath} />);
     expect(screen.getByRole("img")).toBeInTheDocument();
