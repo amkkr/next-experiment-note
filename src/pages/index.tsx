@@ -5,7 +5,7 @@ const Index = () => (
     <Head>
       <title>Create Next App</title>
     </Head>
-    <body>this is test environment project !!</body>
+    this is test environment project !!
   </>
 );
 
