@@ -1,12 +1,12 @@
 import Head from "next/head";
 
-export default function Index() {
-  return (
-    <div>
-      <Head>
-        <title>
-          Create Next App</title>
-      </Head>
-    </div>
-  );
-}
+const Index = () => (
+  <>
+    <Head>
+      <title>Create Next App</title>
+    </Head>
+    <body>this is test environment project !!</body>
+  </>
+);
+
+export default Index;

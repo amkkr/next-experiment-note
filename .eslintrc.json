@@ -13,12 +13,15 @@
     "prettier"
   ],
   "rules": {
+    "@typescript-eslint/indent": [
+      2,
+      2
+    ],
     "semi": [
       "error",
       "always"
     ],
     "react/jsx-filename-extension": [
-      "error",
       {
         "extensions": [
           ".js",
@@ -28,6 +31,12 @@
         ]
       }
     ],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ]
   }
 }
