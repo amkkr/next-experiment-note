@@ -2,29 +2,6 @@ import userEvent from "@testing-library/user-event";
 import ExampleDiv from "@/components/image/ExampleDiv";
 import { render, screen } from "@testing-library/react";
 import image from "public/images/my-picture.jpg";
-import { TextDecoder, TextEncoder } from "util";
-
-global.TextEncoder = TextEncoder;
-// @ts-ignore
-global.TextDecoder = TextDecoder;
-
-beforeAll(() => {
-  Object.defineProperty(window, "scroll", {
-    value: () => undefined,
-    writable: true,
-  });
-  global.ResizeObserver = jest.fn().mockImplementation(() => ({
-    observe: jest.fn(),
-    unobserve: jest.fn(),
-    disconnect: jest.fn(),
-  }));
-
-  Object.defineProperty(global.Image.prototype, "decode", {
-    get() {
-      return () => Promise.resolve();
-    },
-  });
-});
 
 describe("test ExampleDiv", () => {
   test("When passing an image URL starting with https, it should be displayed.", async () => {
