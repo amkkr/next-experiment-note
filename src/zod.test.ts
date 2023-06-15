@@ -18,7 +18,7 @@ describe("test", () => {
       name: "namae",
       descriptions: {
         uuid: "uuid",
-        hoge: "hogehoge", // イメージとしてはopenapiにあってschemaにはないキ  ー
+        hoge: "hogehoge",
       },
     });
 
