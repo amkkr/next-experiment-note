@@ -12,23 +12,14 @@
     "plugin:jest-formatting/recommended",
     "prettier"
   ],
+  "plugins": ["import", "unused-imports"],
   "rules": {
-    "@typescript-eslint/indent": [
-      2,
-      2
-    ],
-    "semi": [
-      "error",
-      "always"
-    ],
+    "@typescript-eslint/indent": [2, 2],
+    "semi": ["error", "always"],
     "react/jsx-filename-extension": [
+      0,
       {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     ],
     "react/react-in-jsx-scope": "off",
@@ -37,6 +28,53 @@
       {
         "namedComponents": "arrow-function"
       }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "json": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/no-named-default": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "{react,react-dom/**,react-router-dom}",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "@src/**",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "never"
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      { "prefer": "type-imports" }
     ]
   }
 }
