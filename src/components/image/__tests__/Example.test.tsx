@@ -1,4 +1,3 @@
-// import userEvent from '@testing-library/user-event';
 import { render, screen } from "@testing-library/react";
 import Example from "../Example";
 import "@testing-library/jest-dom";
@@ -11,10 +10,6 @@ describe("test Example", () => {
     render(<Example imageUrl={imageUrl} />);
     const img = screen.getByRole("img");
     expect(img).toBeInTheDocument();
-
-    // userEvent.click(img);
-    // const minimizeButton = screen.getByRole("button");
-    // expect(minimizeButton).toBeInTheDocument();
   });
 
   test("When passing a local image address, it should be displayed.", () => {
