@@ -2,11 +2,11 @@ import { FC } from "react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
-interface ExampleDivProps {
+interface ExampleProps {
   imageUrl: string;
 }
 
-const Example: FC<ExampleDivProps> = (props: ExampleDivProps) => {
+const Example: FC<ExampleProps> = (props: ExampleProps) => {
   const { imageUrl } = props;
 
   return (
