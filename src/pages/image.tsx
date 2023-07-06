@@ -1,4 +1,4 @@
-import ExampleDiv from "@/components/image/ExampleDiv";
+import Example from "@/components/image/Example";
 import Head from "next/head";
 
 const Image = () => {
@@ -15,10 +15,10 @@ const Image = () => {
       <h1>Images</h1>
 
       <h2>online</h2>
-      <ExampleDiv imageUrl={httpImageUrl} />
+      <Example imageUrl={httpImageUrl} />
 
       <h2>local</h2>
-      <ExampleDiv imageUrl={localImageUrl} />
+      <Example imageUrl={localImageUrl} />
     </>
   );
 };
