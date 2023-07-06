@@ -13,22 +13,13 @@
     "prettier"
   ],
   "rules": {
-    "@typescript-eslint/indent": [
-      2,
-      2
-    ],
-    "semi": [
-      "error",
-      "always"
-    ],
+    "@typescript-eslint/indent": [2, 2],
+    "semi": ["error", "always"],
+    "import/extensions": "off",
     "react/jsx-filename-extension": [
+      "off",
       {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     ],
     "react/react-in-jsx-scope": "off",
@@ -36,6 +27,21 @@
       2,
       {
         "namedComponents": "arrow-function"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "sibling",
+          "parent",
+          "index",
+          "internal",
+          "object"
+        ],
+        "newlines-between": "never"
       }
     ]
   }
