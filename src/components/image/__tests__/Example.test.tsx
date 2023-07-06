@@ -1,6 +1,7 @@
 // import userEvent from '@testing-library/user-event';
 import { render, screen } from "@testing-library/react";
 import Example from "../Example";
+import "@testing-library/jest-dom";
 
 describe("test Example", () => {
   test("When passing an image URL starting with https, it should be displayed.", () => {
