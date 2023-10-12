@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint --dir src",
     "format": "prettier --write src",
-    "test": "jest"
+    "test": "jest",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@types/node": "20.2.5",

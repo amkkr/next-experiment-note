@@ -1,5 +1,5 @@
-import Example from "@/components/image/Example";
 import Head from "next/head";
+import Example from "@/components/image/Example";
 
 const Image = () => {
   const httpImageUrl =
